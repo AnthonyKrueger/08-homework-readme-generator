@@ -80,46 +80,55 @@ function generateMarkdown(data) {
   const licenseBadges = renderLicenseBadges(licenses)
   const licenseLinks = renderLicenseLink(licenses)
   const licenseSection = renderLicenseSection(licenseLinks)
-
-
-
+  let tableOfContents = `- [Installation](#installation)
+  - [Usage](#usage)
+  - [Contribution](#contribution)
+  - [Testing](#testing)
+  - [Questions](#questions)`
+  console.log(licenseSection);
+  if(licenseSection != "") {
+    tableOfContents = tableOfContents.concat(`\n  - [Licenses](#licenses)`)
+  }
   return `# ${title}
 
   ${licenseBadges}
   
+
   ## Description
   
   ${description}
   
+
   ## Table of Contents
   
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribution](#contribution)
-  - [Testing](#testing)
-  - [Questions](#questions)
-  - [Licenses](#licenses)
+  ${tableOfContents}
   
+
   ## Installation
   
   ${install}
   
+
   ## Usage
   
   ${usage}
   
+
   ## Contributing
   
   ${contribution}
   
+
   ## Testing
   
   ${testing}
   
+
   ## Questions
   
   Contact me at my [Github Profile](https://github.com/${username})
   or my email address: ${email}
+  
   
   ${licenseSection}`;
 }
