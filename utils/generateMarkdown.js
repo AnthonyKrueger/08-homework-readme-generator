@@ -85,7 +85,6 @@ function generateMarkdown(data) {
   - [Contribution](#contribution)
   - [Testing](#testing)
   - [Questions](#questions)`
-  console.log(licenseSection);
   if(licenseSection != "") {
     tableOfContents = tableOfContents.concat(`\n  - [Licenses](#licenses)`)
   }
@@ -129,7 +128,7 @@ function generateMarkdown(data) {
   Contact me at my [Github Profile](https://github.com/${username})
   or my email address: ${email}
   
-  
+
   ${licenseSection}`;
 }
 
