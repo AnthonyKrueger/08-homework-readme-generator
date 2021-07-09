@@ -1,4 +1,4 @@
-# 08-homework-readme-generator
+# README-generator
 
 
   ## Description
